@@ -1,8 +1,3 @@
-<%-- 
-    Document   : account-list
-    Created on : 03-03-2014, 19:06:25
-    Author     : christian-if
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -10,7 +5,6 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width"/>
         <link type="text/css" rel="stylesheet" href="default.css"/>

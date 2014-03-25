@@ -3,10 +3,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <link type="text/css" rel="stylesheet" href="default.css"/>
+        
         <title>Details for ${pageContext.request.remoteUser}</title>
     </head>
     <body>
-        <h1>Customer Details!</h1>
+        <h1>Customer details</h1>
         <p>${customer.firstName}</p>
         <p>${customer.lastName}</p>
         <p>${customer.email}</p>

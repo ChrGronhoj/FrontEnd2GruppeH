@@ -1,4 +1,4 @@
-package dk.cphbusiness.bank.view.pageController;
+package frontController;
 
 import java.io.IOException;
 import java.io.PrintWriter;

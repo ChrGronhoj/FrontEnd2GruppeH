@@ -22,44 +22,46 @@
         <p>"10/10" - <i>IGN</i></p>
         <p>"A wise man chooses GronPo Bank" - <i>Socrates</i></p>
         <br>
+        <!--        <ul>
+                    From here you can navigate to the following pages:
+                    <li><a href="Controller?command=list-customers">Customer list page</a></li>
+                    <li><a href="Controller?command=create-customer">Create customer page</a></li>
+                </ul>-->
+        <form action="Controller" method="POST">
+            <button name="command" value="list-customers">List customers</button>
+            <button name="command" value="create-customer">Create new customer</button>
+        </form>
 
-        <br/>
         <hr>
-        <ul>
-            From here you can navigate to:
-            <li><a href="Controller?command=list-customers">Customer list page</a></li>
-            <li><a href="Controller?command=create-customer">Create customer</a></li>
+        <h5> Security implementationer</h5>
+        <h6>This page can be seen by all</h6>
+        <br/>
 
-            <hr>
-            <h5> Security implementationer</h5>
-            <h6>This page can be seen by all</h6>
-            <br/>
+    <c:if test="${pageContext.request.isUserInRole('Customer')==true}">
+        <li><a href="Controller?command=customer-main">Customer main page</a></li>
+    </c:if >
 
-            <c:if test="${pageContext.request.isUserInRole('Customer')==true}">
-                <li><a href="Controller?command=customer-main">Customer main page</a></li>
-            </c:if >
+    <c:if test="${pageContext.request.isUserInRole('Employee')==true || 
+                  pageContext.request.isUserInRole('SuperEmployee')==true}">
+        <li><a href="Controller?command=employee-main">Employee Main page</a></li>
+    </c:if>
 
-            <c:if test="${pageContext.request.isUserInRole('Employee')==true || 
-                          pageContext.request.isUserInRole('SuperEmployee')==true}">
-                <li><a href="Controller?command=employee-main">Employee Main page</a></li>
-            </c:if>
+    <c:if test="${pageContext.request.isUserInRole('SuperEmployee')==true}">
+        <li><a href="Controller?command=addcustomer">Add Customer</a></li>
+    </c:if>
 
-            <c:if test="${pageContext.request.isUserInRole('SuperEmployee')==true}">
-                <li><a href="Controller?command=addcustomer">Add Customer</a></li>
-            </c:if>
-
-        </ul>
-        <h3>
-            <c:choose >
-                <c:when test="${pageContext.request.remoteUser== null}">
-                    <a href="Controller?command=showlogin">Login</a>
-                </c:when>
-                <c:otherwise>
-                    <a href="Controller?command=logout">Log out</a>
-                </c:otherwise>
-            </c:choose>
-        </h3>
+</ul>
+<h3>
+    <c:choose >
+        <c:when test="${pageContext.request.remoteUser== null}">
+            <a href="Controller?command=showlogin">Login</a>
+        </c:when>
+        <c:otherwise>
+            <a href="Controller?command=logout">Log out</a>
+        </c:otherwise>
+    </c:choose>
+</h3>
 
 
-    </body>
+</body>
 </html>

@@ -1,8 +1,3 @@
-<%-- 
-    Document   : customer-list
-    Created on : 03-03-2014, 19:06:11
-    Author     : christian-if
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -10,7 +5,6 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width"/>
         <link type="text/css" rel="stylesheet" href="default.css"/>
@@ -19,7 +13,7 @@
     </head>
     <body>
         <h1>Customer list</h1>
-        Welcome to the customer list page
+        Welcome to the customer list page. This page should be inaccessible for customers.
         <br>
         <form action="Controller" method="POST">
             <ul>
@@ -33,7 +27,6 @@
                             <td>
                                 <a href='Controller?command=list-customer-accounts&customerID=${customers.cpr}'> ${customers.cpr}</a>
                             </td>
-                            <!--<td colspan="2">-->
                             <td>
                                 <input type="hidden" name="customerID" value="${customers.cpr}">
                                 <button type="submit" name="command" value="change-customer">Edit</button>
@@ -46,7 +39,7 @@
                 <hr>
             </ul>
             <form action="Controller" method="POST">
-                <button name="command" value="main">Back to Main</button>
+                <button name="command" value="main">Back to main page</button>
             </form>
     </body>
 </html>

@@ -1,18 +1,17 @@
-<%-- 
-    Document   : account-edit
-    Created on : 17-Mar-2014, 13:38:27
-    Author     : Po
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Create Account</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <link type="text/css" rel="stylesheet" href="default.css"/>
+        
+        <title>Create account</title>
     </head>
     <body>
-        <h1>Create Account</h1>
+        <h1>Create account</h1>
          <form action="Controller" method="POST">
             <table border="0">
                 <tr>

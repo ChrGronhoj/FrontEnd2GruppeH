@@ -1,3 +1,5 @@
+package frontController;
+
 //package dk.cphbusiness.bank.view.pageController;
 //
 //import dk.cphbusiness.bank.contract.BankManager;
