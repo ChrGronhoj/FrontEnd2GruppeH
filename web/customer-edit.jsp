@@ -53,8 +53,8 @@
                 </tr>
                 <tr class="ButtonRow">
                     <td colspan="2">
-                        <button type="submit" name="command" value="save-customer">Save Customer</button>
-                        <button type="submit" name="command" value="main">Back to Main</button>
+                        <button type="submit" name="command" value="save-customer">Save customer</button>
+                        <button type="submit" name="command" value="main">Back to main</button>
                     </td>
                 </tr>
             </table>
